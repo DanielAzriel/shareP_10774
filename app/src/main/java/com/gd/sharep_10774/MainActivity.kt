@@ -76,6 +76,8 @@ class MainActivity : AppCompatActivity() {
         textViewEmail.text = ""
         Toast.makeText(baseContext, "Cleared data",
             Toast.LENGTH_SHORT).show()
+        val myPreference = getSharedPreferences("myPref", Context.MODE_PRIVATE)
+        myPreference.edit().clear().apply()
     }
 }
 
